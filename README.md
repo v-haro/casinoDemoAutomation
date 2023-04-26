@@ -1,32 +1,78 @@
-Cypress Automated Tests for Casino Registration Page
-This project contains Cypress automated tests for the user registration page of a casino website.
+# Cypress Signup Test
 
-Requirements
-To run the tests in this project, you'll need:
+This project contains automated test cases for the Signup functionality of the following page:
 
-Node.js (version 12 or higher)
-Cypress (version 8 or higher)
-Installation
-Clone this repository to your local machine.
-Install the dependencies by running npm install.
-Running the Tests
-Start the Cypress Test Runner by running npm run cypress:open.
-Click on the signup.cy.js file to run the tests.
-The tests will open a new browser window and run automatically.
-Test Cases
-This project contains the following test cases for the registration page:
+- https://demo.casino/user/registration
 
-Create a User
-This test case verifies that a user can be created by filling out the registration form and submitting it.
+## Prerequisites
 
-Email Already in Use
-This test case verifies that an error message is displayed when a user tries to create another account with an email address that is already in use.
+- Node.js (v14.16.0 or later)
+- Git
+- Chrome or Firefox browser installed
 
-Test Results
-After running the tests, you can view the results in the Cypress Dashboard. Follow these steps to generate a report:
+## Setup
 
-Create an account on the Cypress Dashboard website.
-Set the record environment variable to true by running export CYPRESS_RECORD_KEY=<your-record-key> in the terminal (replace <your-record-key> with your actual record key).
-Re-run the tests by running npm run cypress:run.
-The test results will be automatically uploaded to the Cypress Dashboard. You can view them by logging in to your account on the website.
-That's it! If you have any questions or issues, please feel free to contact me.
+1. Clone the repository:
+
+git clone <repository-url>
+
+markdown
+Copy code
+
+2. Install dependencies:
+
+cd cypress-signup-test
+npm install
+
+markdown
+Copy code
+
+## Running the Tests
+
+1. Open Cypress:
+
+npm run cy:open
+
+sql
+Copy code
+
+2. In the Cypress window, click on `signup.cy.js` to run the test suite.
+
+## Test Cases
+
+The test suite includes the following test cases:
+
+### Create a User
+
+This test case verifies if the user is able to create a new account successfully in the Signup page.
+
+### Validate Error When User Email Already Exists
+
+This test case verifies if the system displays an error message when a user tries to create another account with an email that already exists in the system.
+
+## Test Report
+
+The test results are automatically recorded in the Cypress Dashboard when running tests locally. In order to generate the test report, you need to:
+
+1. Log in to the Cypress Dashboard:
+
+npm run cy:dashboard:login
+
+csharp
+Copy code
+
+2. Run the test suite with record option:
+
+npm run cy:run
+
+css
+Copy code
+
+3. After the tests finish running, go to the Cypress Dashboard to view the test results:
+
+npm run cy:dashboard:open
+
+vbnet
+Copy code
+
+For more information on how to use the Cypress Dashboard, please refer to the official documentation: https://docs.cypress.io/guides/dashboard/introduction
